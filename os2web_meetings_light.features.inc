@@ -7,7 +7,8 @@
 /**
  * Implements hook_ctools_plugin_api().
  */
-function os2web_meetings_light_ctools_plugin_api($module = NULL, $api = NULL) {
+function os2web_meetings_light_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -16,7 +17,7 @@ function os2web_meetings_light_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function os2web_meetings_light_views_api($module = NULL, $api = NULL) {
+function os2web_meetings_light_views_api() {
   return array("api" => "3.0");
 }
 
@@ -30,7 +31,7 @@ function os2web_meetings_light_node_info() {
       'base' => 'node_content',
       'description' => t('Bullet point on a meeting or agenda.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Overskrift'),
       'help' => '',
     ),
     'os2web_meetings_bullet_attach' => array(
@@ -38,7 +39,7 @@ function os2web_meetings_light_node_info() {
       'base' => 'node_content',
       'description' => t('An attachment to a meeting bullet point.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Overskrift'),
       'help' => '',
     ),
     'os2web_meetings_meeting' => array(
@@ -46,7 +47,7 @@ function os2web_meetings_light_node_info() {
       'base' => 'node_content',
       'description' => t('Meeting or agenda imported from an ESDH system.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Overskrift'),
       'help' => '',
     ),
   );

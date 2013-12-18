@@ -160,6 +160,20 @@ function os2web_meetings_light_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_os2web_meetings_light_month_date';
+  $strongarm->value = 'F Y';
+  $export['date_format_os2web_meetings_light_month_date'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_os2web_meetings_light_short_date';
+  $strongarm->value = 'd.m.Y';
+  $export['date_format_os2web_meetings_light_short_date'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__os2web_meetings_bullet';
   $strongarm->value = array(
     'view_modes' => array(
