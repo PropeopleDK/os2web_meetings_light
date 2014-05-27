@@ -491,9 +491,10 @@ function os2web_meetings_light_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'links' => 1,
+          'view_mode' => 'default',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 5,
       ),
       'ical' => array(
@@ -613,7 +614,7 @@ function os2web_meetings_light_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'ec_date_view',
           'fromto' => 'value',
           'multiple_from' => '',
           'multiple_number' => '',

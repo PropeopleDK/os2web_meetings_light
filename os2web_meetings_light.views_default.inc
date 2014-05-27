@@ -327,10 +327,12 @@ function os2web_meetings_light_views_default_views() {
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['id'] = 'field_os2web_meetings_date_value';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['table'] = 'field_data_field_os2web_meetings_date';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['field'] = 'field_os2web_meetings_date_value';
+  $handler->display->display_options['filters']['field_os2web_meetings_date_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['expose']['operator_id'] = 'field_os2web_meetings_date_value_op';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['expose']['label'] = 'Date -  start date (field_os2web_meetings_date)';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['expose']['operator'] = 'field_os2web_meetings_date_value_op';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['expose']['identifier'] = 'field_os2web_meetings_date_value';
+  $handler->display->display_options['filters']['field_os2web_meetings_date_value']['default_date'] = 'now';
   /* Filterkriterie: Indhold: Type (field_os2web_meetings_type) */
   $handler->display->display_options['filters']['field_os2web_meetings_type_value']['id'] = 'field_os2web_meetings_type_value';
   $handler->display->display_options['filters']['field_os2web_meetings_type_value']['table'] = 'field_data_field_os2web_meetings_type';

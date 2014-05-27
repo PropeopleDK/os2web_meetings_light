@@ -287,10 +287,23 @@ function os2web_meetings_light_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'node_embed' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),
-      'display' => array(),
+      'display' => array(
+        'domain' => array(
+          'default' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__os2web_meetings_meeting'] = $strongarm;
