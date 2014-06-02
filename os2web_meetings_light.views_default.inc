@@ -113,7 +113,7 @@ function os2web_meetings_light_views_default_views() {
   $handler->display->display_options['fields']['field_os2web_meetings_committee']['id'] = 'field_os2web_meetings_committee';
   $handler->display->display_options['fields']['field_os2web_meetings_committee']['table'] = 'field_data_field_os2web_meetings_committee';
   $handler->display->display_options['fields']['field_os2web_meetings_committee']['field'] = 'field_os2web_meetings_committee';
-  $handler->display->display_options['fields']['field_os2web_meetings_committee']['label'] = 'Søgeresultat';
+  $handler->display->display_options['fields']['field_os2web_meetings_committee']['label'] = 'Udvalg';
   $handler->display->display_options['fields']['field_os2web_meetings_committee']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_os2web_meetings_committee']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_os2web_meetings_committee']['element_label_colon'] = FALSE;
@@ -896,7 +896,7 @@ function os2web_meetings_light_views_default_views() {
     t('næste ›'),
     t('sidste »'),
     t('Overskrift'),
-    t('Søgeresultat'),
+    t('Udvalg'),
     t('Date -  start date (field_os2web_meetings_date)'),
     t('Page'),
     t('Meeting agendas and summaries'),
