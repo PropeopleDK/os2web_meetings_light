@@ -78,22 +78,23 @@ function os2web_meetings_light_update_search_index($meeting) {
   if (is_array($bullet_points)) {
     foreach ($bullet_points as $bullet_point) {
       $bullet_point_node = node_load($bullet_point['target_id']);
-      $text = strip_tags(check_markup($bullet_point_node->title, 'plain_text'));
-      $bullet_point_data .= ' ' . $text;
+      if ($bullet_point_node) {
+        $text = strip_tags(check_markup($bullet_point_node->title, 'plain_text'));
+        $bullet_point_data .= ' ' . $text;
 
-      $attachments = field_get_items($entity_type, $bullet_point_node, 'field_os2web_meetings_attach');
-      if (is_array($attachments)) {
-        foreach ($attachments as $attachment) {
-          $attachment_node = node_load($attachment['target_id']);
-          $body = field_get_items($entity_type, $attachment_node, 'field_os2web_meetings_bpa_body');
-          $body = $body[0]['value'];
-          $text = strip_tags(check_markup($body, 'filtered_html'));
-          $text = trim(preg_replace('/[\",;:.\'\(\)]/', ' ', $text));
-          $text = trim(preg_replace('/\s\s+/', ' ', $text));
-          $bullet_point_data .= ' ' . $text;
+        $attachments = field_get_items($entity_type, $bullet_point_node, 'field_os2web_meetings_attach');
+        if (is_array($attachments)) {
+          foreach ($attachments as $attachment) {
+            $attachment_node = node_load($attachment['target_id']);
+            $body = field_get_items($entity_type, $attachment_node, 'field_os2web_meetings_bpa_body');
+            $body = $body[0]['value'];
+            $text = strip_tags(check_markup($body, 'filtered_html'));
+            $text = trim(preg_replace('/[\",;:.\'\(\)]/', ' ', $text));
+            $text = trim(preg_replace('/\s\s+/', ' ', $text));
+            $bullet_point_data .= ' ' . $text;
+          }
         }
       }
-
     }
   }
 
