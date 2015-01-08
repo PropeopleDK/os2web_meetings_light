@@ -32,10 +32,10 @@ function os2web_meetings_light_cron() {
         foreach ($meetings as $meeting) {
           $queue->createItem(array('meeting' => $meeting));
         }
+        
+        variable_set('os2web_meetings_light_last_search_index_time', $current_time);
       }
     }
-
-    variable_set('os2web_meetings_light_last_search_index_time', $current_time);
   }
 }
 
