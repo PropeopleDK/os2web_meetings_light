@@ -367,6 +367,7 @@ function os2web_meetings_light_field_default_field_bases() {
     'locked' => 0,
     'module' => 'taxonomy',
     'settings' => array(
+      'allow_term_autocreation' => TRUE,
       'allowed_values' => array(
         0 => array(
           'vocabulary' => 'os2web_meetings_tax_committee',
@@ -567,6 +568,7 @@ function os2web_meetings_light_field_default_field_bases() {
     'locked' => 0,
     'module' => 'taxonomy',
     'settings' => array(
+      'allow_term_autocreation' => TRUE,
       'allowed_values' => array(
         0 => array(
           'vocabulary' => 'os2web_meetings_tax_location',
@@ -628,6 +630,7 @@ function os2web_meetings_light_field_default_field_bases() {
     'locked' => 0,
     'module' => 'taxonomy',
     'settings' => array(
+      'allow_term_autocreation' => TRUE,
       'allowed_values' => array(
         0 => array(
           'vocabulary' => 'os2web_meetings_tax_status',
