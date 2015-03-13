@@ -132,9 +132,8 @@ function os2web_meetings_light_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'file',
         'settings' => array(),
-        'type' => 'file_default',
+        'type' => 'hidden',
         'weight' => 2,
       ),
       'os2web_meetings_meeting_detail_view' => array(
